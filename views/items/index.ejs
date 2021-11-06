@@ -1,0 +1,13 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<main>
+    <title>All Items</title>
+            <% items.forEach((item) => { %> 
+                    <div>
+                    <p> <%= item.title %> </p>
+                    <img src= "<%= item.imageUrl %>" alt="Image of Item" class="item-img">
+                    </div>
+                <% }) %> 
+</main>
+
+<%- include('../partials/footer') %>

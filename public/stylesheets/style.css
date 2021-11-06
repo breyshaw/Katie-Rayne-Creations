@@ -42,3 +42,8 @@ main {
 h1 {
   font-size: 3.6rem;
 }
+
+.item-img{
+  height: 300px;
+  width: 225px;
+}

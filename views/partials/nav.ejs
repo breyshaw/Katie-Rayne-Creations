@@ -1,9 +1,10 @@
-  <% if (!user) { %>
-    <link rel="stylesheet" href="/stylesheets/siwg.css">
-  <% } %>
 </head>
+
 <body>
   <nav>
+    <% if (!user) { %>
+      <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <% } %>
     <% if (user) { %>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
@@ -16,9 +17,15 @@
       </a>
     <% } %>
 
-    <a href="/items/new" <%- title==='Add Item' ? 'class="active"' : '' %>
+    <a href="/items/new" 
       >
       ADD ITEM
     </a>
+
+    <a href="/items" 
+      >
+      ALL ITEMS
+    </a>
+
 
   </nav>

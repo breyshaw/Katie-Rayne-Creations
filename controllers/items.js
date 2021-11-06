@@ -16,10 +16,19 @@ function create(req, res) {
 })
 }
 
+function index(req, res) {
+    Item.find({}, function(err, items){
+        res.render('items/index', {
+            items
+        })
+    })
+}
+
 
 
 
 export {
     newItem as new,
-    create
+    create,
+    index
 }
