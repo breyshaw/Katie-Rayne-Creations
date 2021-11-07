@@ -58,6 +58,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //custom middleware
+app.use(methodOverride('_method'))
 app.use(passUserToView)
 
 // router middleware

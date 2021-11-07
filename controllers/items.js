@@ -41,11 +41,34 @@ function createReview(req, res) {
     })
 }
 
+function deleteItem(req,res) {
+    Item.findByIdAndDelete(req.params.id, function(err, item) {
+        res.redirect('/items')
+    })
+}
+
+function edit(req, res) {
+    Item.findById(req.params.id, function(err, item) {
+        res.render('items/edit', {
+            title: "Edit item",
+            item,
+            err,
+        })
+    })
+}
+function update(req, res) {
+        Item.findByIdAndUpdate(req.params.id, req.body, function(err, item) {
+            res.redirect(`/items/${item._id}`)
+        })
+    }
 
 export {
     newItem as new,
     create,
     index,
     show,
-    createReview
+    createReview,
+    deleteItem as delete,
+    edit,
+    update
 }

@@ -12,6 +12,17 @@
                     <img src= "<%= item.imageUrl %>" alt="Image of Item" class="item-img">
                     </div>
                     <a href="/items/<%= item._id %> ">Details</a>
+                    <div>
+                    </a>
+                    <div>
+                    <a href="/items/<%= item._id %>/edit">
+                        <button>Edit Item</button>
+                      </a>
+                    </div>
+                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                    <button>Delete item</button>
+                    
+                    </form>
                 <% }) %> 
     </section>
 </main>

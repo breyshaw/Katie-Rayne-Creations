@@ -13,6 +13,13 @@ router.post('/', itemsCtrl.create)
 router.get('/:id', itemsCtrl.show)
 // POST /items/:id/reviews
 router.post('/:id/reviews', itemsCtrl.createReview)
+// DELETE /items/:id
+router.delete("/:id", itemsCtrl.delete)
+// GET /items/id:/edit
+router.get("/:id/edit", itemsCtrl.edit)
+// PUT /items/:id
+router.put("/:id", itemsCtrl.update)
+
 
 export {
     router
