@@ -11,6 +11,8 @@ router.get('/new', itemsCtrl.new)
 router.post('/', itemsCtrl.create)
 // GET /items/:id
 router.get('/:id', itemsCtrl.show)
+// POST /items/:id/reviews
+router.post('/:id/reviews', itemsCtrl.createReview)
 
 export {
     router

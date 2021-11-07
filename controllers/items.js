@@ -32,12 +32,20 @@ function show(req, res) {
     })
 }
 
-
+function createReview(req, res) {
+    Item.findById(req.params.id, function(err, item) {
+        item.reviews.push(req.body)
+        item.save(function(err) {
+            res.redirect(`/items/${item._id}`)
+        })
+    })
+}
 
 
 export {
     newItem as new,
     create,
     index,
-    show
+    show,
+    createReview
 }

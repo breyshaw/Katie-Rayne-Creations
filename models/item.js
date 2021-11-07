@@ -3,10 +3,11 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
-    // author: {reference author here with correct syntax}
+    user: {type: Schema.Types.ObjectId, ref:"Profile"},
     content: String,
     rating: {type: Number, min: 1, max: 5},
-
+}, {
+    timestamps: true
 })
 
 const itemSchema = new Schema({

@@ -1,16 +1,70 @@
 <%- include('../partials/html-head') %>
 
-<main>
-    <img id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
-    <%- include('../partials/nav') %>
-    <h1><%= item.title %> </h1>
-    <img id='showItem' src='<%= item.imageUrl %>'>
+    <main>
+        <img id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo" />
+        <%- include('../partials/nav') %>
+            <h1>
+                <%= item.title %>
+            </h1>
+            <img id='showItem' src='<%= item.imageUrl %>'>
 
-    <section>
-        <p>Price: <%= item.price %> </p>
-        <div>Info:</div>
-        <div><%= item.info %> </div>
-    </section>
-</main>
+            <section>
+                <p>Price: <%= item.price %>
+                </p>
+                <div>Info:</div>
+                <div>
+                    <%= item.info %>
+                </div>
+            </section>
+            <section>
+                <h2>Reviews</h2>
+                <form id="review-form" action="/items/<%= item._id %>/reviews" method="POST">
+                    <label for="review-text">Review:</label>
+                    <textarea name="content" id="review-form" cols="30" rows="10"></textarea>
+                    <label for="rating-dropdown">Rating:</label>
+                    <select name="rating" id="rating-dropdown">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                    </select>
+                    <button type="submit">Add Review</button>
+                    <% if (item.reviews.length) { %>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Date</th>
+                                    <th>Review</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% item.reviews.forEach(function(review) { %>
+                                    <tr>
+                                        <td>
+                                            <%= review.user %>
+                                        </td>
+                                        <td>
+                                            <%= review.createdAt.toLocaleDateString() %>
+                                        </td>
+                                        <td>
+                                            <%= review.content %>
+                                        </td>
+                                        <td>
+                                            <%= review.rating %>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                        <% } else { %>
+                            <h3>No Reviews</h3>
+                            <% } %>
+                </form>
+            </section>
+    </main>
 
-<%- include('../partials/footer') %>
+
+    <%- include('../partials/footer') %>
