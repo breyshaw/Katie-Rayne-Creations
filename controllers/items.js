@@ -24,11 +24,20 @@ function index(req, res) {
     })
 }
 
+function show(req, res) {
+    Item.findById(req.params.id, function (err, item) {
+        res.render('items/show', {
+        item: item
+        })
+    })
+}
+
 
 
 
 export {
     newItem as new,
     create,
-    index
+    index,
+    show
 }
