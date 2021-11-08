@@ -75,6 +75,16 @@ function update(req, res) {
     }
 
 
+    function tumblers(req, res) {
+        Item.find({type:'tumbler'}, function(err, items){
+            res.render('items/tumblers', {
+                items
+            })
+        })
+    }
+ 
+
+
     
 export {
     newItem as new,
@@ -85,5 +95,6 @@ export {
     deleteItem as delete,
     edit,
     update,
-    clothes
+    clothes,
+    tumblers
 }

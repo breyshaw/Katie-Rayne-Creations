@@ -7,8 +7,8 @@ import * as itemsCtrl from '../controllers/items.js'
 router.get('/', itemsCtrl.index)
 // GET /items/clothes
 router.get('/clothes', itemsCtrl.clothes)
-// // GET /items/tumblers
-// router.get('/tumblers', itemsCtrl.tumblers)
+// GET /items/tumblers
+router.get('/tumblers', itemsCtrl.tumblers)
 // // GET /items/misc
 // router.get('/misc', itemsCtrl.misc)
 // GET /items/new
