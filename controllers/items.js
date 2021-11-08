@@ -82,6 +82,14 @@ function update(req, res) {
             })
         })
     }
+
+    function misc(req, res) {
+        Item.find({type:'misc'}, function(err, items){
+            res.render('items/misc', {
+                items
+            })
+        })
+    }
  
 
 
@@ -96,5 +104,6 @@ export {
     edit,
     update,
     clothes,
-    tumblers
+    tumblers,
+    misc
 }

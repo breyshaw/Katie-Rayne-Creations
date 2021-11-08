@@ -9,8 +9,8 @@ router.get('/', itemsCtrl.index)
 router.get('/clothes', itemsCtrl.clothes)
 // GET /items/tumblers
 router.get('/tumblers', itemsCtrl.tumblers)
-// // GET /items/misc
-// router.get('/misc', itemsCtrl.misc)
+// GET /items/misc
+router.get('/misc', itemsCtrl.misc)
 // GET /items/new
 router.get('/new', itemsCtrl.new)
 // POST /items
