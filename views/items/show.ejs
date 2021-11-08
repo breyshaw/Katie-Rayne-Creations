@@ -17,14 +17,6 @@
                 </div>
             </section>
             <section>
-                <% if(!user) { %> 
-                <h3>Reviews (sign in to leave a review!)</h3>
-                <a href="/auth/google" class="siwg-link">
-                    <button type="submit" class="siwg">
-                      <img id="siwg-image" alt="Sign in with Google" />
-                    </button>
-                  </a>
-                <% } %> 
                 <% if (user) { %> 
                 <form id="review-form" action="/items/<%= item._id %>/reviews" method="POST">
                     <label for="review-text">Review:</label>
@@ -71,6 +63,15 @@
                         <% } else { %>
                             <h3>No Reviews</h3>
                             <% } %>
+                            <% if(!user) { %> 
+                                <h3>(sign in to leave a review!)</h3>
+                                <a href="/auth/google" class="siwg-link">
+                                    <button type="submit" class="siwg">
+                                      <img id="siwg-image" alt="Sign in with Google" />
+                                    </button>
+                                  </a>
+                                <% } %> 
+                                
                 </form>
             </section>
     </main>
