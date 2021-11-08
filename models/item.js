@@ -13,7 +13,7 @@ const reviewSchema = new Schema({
 const itemSchema = new Schema({
     title: String,
     imageUrl: String,
-    typeOfItem: String,
+    type: String,
     price: Number,
     info: String,
     reviews: [reviewSchema]

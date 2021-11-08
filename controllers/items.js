@@ -65,6 +65,17 @@ function update(req, res) {
     // function clothes(req,res) {
     //     Item.find()
     // }
+
+    function clothes(req, res) {
+        Item.find({type: 'clothing'}, function(err, items){
+            res.render('items/clothes', {
+                items
+            })
+        })
+    }
+
+
+    
 export {
     newItem as new,
     create,
@@ -73,5 +84,6 @@ export {
     createReview,
     deleteItem as delete,
     edit,
-    update
+    update,
+    clothes
 }
