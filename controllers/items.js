@@ -62,6 +62,9 @@ function update(req, res) {
         })
     }
 
+    // function clothes(req,res) {
+    //     Item.find()
+    // }
 export {
     newItem as new,
     create,
