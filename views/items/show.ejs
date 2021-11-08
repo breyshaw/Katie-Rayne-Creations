@@ -17,7 +17,15 @@
                 </div>
             </section>
             <section>
-                <h2>Reviews</h2>
+                <% if(!user) { %> 
+                <h3>Reviews (sign in to leave a review!)</h3>
+                <a href="/auth/google" class="siwg-link">
+                    <button type="submit" class="siwg">
+                      <img id="siwg-image" alt="Sign in with Google" />
+                    </button>
+                  </a>
+                <% } %> 
+                <% if (user) { %> 
                 <form id="review-form" action="/items/<%= item._id %>/reviews" method="POST">
                     <label for="review-text">Review:</label>
                     <textarea name="content" id="review-form" cols="45" rows="2"></textarea>
@@ -30,6 +38,7 @@
                         <option value="5" selected>5</option>
                     </select>
                     <button type="submit">Add Review</button>
+                    <% } %> 
                     <% if (item.reviews.length) { %>
                         <table>
                             <thead>
