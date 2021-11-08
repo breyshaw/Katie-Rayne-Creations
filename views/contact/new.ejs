@@ -1,0 +1,19 @@
+<%- include('../partials/html-head') %>
+<title><%= title %></title>
+
+<main>
+    <img id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
+    <%- include('../partials/nav') %>
+    <h1>Send an email!</h1>
+    <form action="/items" method="POST">
+    <label>Enter your email:
+        <input type="string" name="email">
+    </label><br>
+    <label>Enter below any items you are interested in or if you have any questions!
+        <input type="string" name="content">
+    </label><br>
+    <button type="submit">Send Email</button>
+    </form>
+</main>
+
+<%- include('../partials/footer') %>
