@@ -68,6 +68,10 @@ h1 {
   width: 75%;
 }
 
+#carousel-image {
+  border-radius: 15px;
+}
+
 #showItem {
   height: 550px;
   width: 425px;
