@@ -64,8 +64,8 @@ h1 {
 }
 
 .carousel {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 1%;
   width: 75%;
 }
 
@@ -86,4 +86,8 @@ section {
 
 a {
   color: white;
+}
+
+button.navbar-toggler {
+  width: 100%;
 }

@@ -1,11 +1,25 @@
 <%- include('./partials/html-head') %>
 <main>
-  <img id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
+  <img class='animate__animated animate__heartBeat' id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
   <%- include('./partials/nav') %>
   <title>HomePage</title>
-  <h1>Welcome <%= user ? user.profile.name : "" %>!</h1>
-  <h1>Katie Rayne Creations</h1>
-  <h2>Small business established by a silly goose.</h2>
+  <h1 class="animate__animated animate__backInRight" >Welcome <%= user ? user.profile.name : "" %>!</h1>
+  <h1 class="animate__animated animate__backInRight" >Katie Rayne Creations</h1>
+  <h2 class="animate__animated animate__backInRight" >Small business established by a silly goose.</h2>
+  <% if (!user) { %>
+    <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <% } %>
+    <% if (user) { %>
+      <a href="/auth/logout">
+        <button class="siwg animate__animated animate__backInRight" type="submit">Logout</button>
+      </a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg animate__animated animate__backInRight">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+        <% } %>
  
 </main>
 

@@ -2,7 +2,7 @@
 <title><%= title %></title>
 
 <main>
-    <img id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
+    <img class="animate__animated animate__slideInDown" id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
     <%- include('../partials/nav') %>
     <h1>Edit Item</h1>
     <form action="/items/<%= item._id %>?_method=PUT" method="POST">

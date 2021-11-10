@@ -2,7 +2,7 @@
 
 
 <main>
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide animate__animated animate__backInRight" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img id='carousel-image' src="https://i.imgur.com/2imkriC.png" class="d-block w-100" alt="...">
@@ -21,8 +21,8 @@
     </button>
   </div>
     <%- include('../partials/nav') %>
-    <h1>Clothing</h1>
-    <section>
+    <h1 class='animate__animated animate__backInRight'>Clothing</h1>
+    <section class='animate__animated animate__backInRight'>
             <% items.forEach((item) => { %> 
                     <div>
                     <p> <%= item.title %> </p>
