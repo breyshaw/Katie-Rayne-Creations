@@ -1,17 +1,10 @@
-
-import { Contact } from '../models/contact.js'
-
-
-
-function newInquiry(req, res) {
-    Contact.find({}, function (err, contacts) {
+function newContact(req, res) {
       res.render('contact/new', {
         title: 'Contact me!',
-        contacts: contacts,
       })
-    })
-  }
+    }
+  
 
 export {
-    newInquiry as new,
+    newContact as new,
 }
