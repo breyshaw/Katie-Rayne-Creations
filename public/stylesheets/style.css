@@ -33,10 +33,7 @@ body {
 }
 
 body {
-  background-color: lightblue ;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
+  background-color: rgb(56, 197, 244) ;
 }
 
 nav {
