@@ -8,7 +8,7 @@
             </h1>
             <img id='showItem' src='<%= item.imageUrl %>'>
 
-            <section>
+            <section id="show-details">
                 <p>Price: <%= item.price %>
                 </p>
                 <div>Info:</div>
@@ -16,22 +16,23 @@
                     <%= item.info %>
                 </div>
             </section>
+
             <section>
                 <% if (user) { %> 
                 <form id="review-form" action="/items/<%= item._id %>/reviews" method="POST">
-                    <label for="review-user">Your name(optional):</label>
-                    <textarea name="username" id="review-form"></textarea>
-                    <label for="review-text">Review:</label>
-                    <textarea name="content" id="review-form" cols="45" rows="2"></textarea>
-                    <label for="rating-dropdown">Rating:</label>
-                    <select name="rating" id="rating-dropdown">
+                    <label class="form-label" for="review-user">Your name(optional):</label>
+                    <textarea class="form-control" name="username" id="review-form"></textarea>
+                    <label class="form-label" for="review-text">Review:</label>
+                    <textarea class="form-control" name="content" id="review-form" cols="45" rows="2"></textarea>
+                    <label class="form-label" for="rating-dropdown">Rating:</label>
+                    <select class="btn btn-secondary dropdown-toggle" name="rating" id="rating-dropdown">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5" selected>5</option>
                     </select>
-                    <button type="submit">Add Review</button>
+                    <button class="btn btn-secondary" type="submit">Add Review</button>
                     <% } %> 
                     <% if (item.reviews.length) { %>
                         <table class='table table-primary table-striped'>
@@ -66,6 +67,7 @@
                             <h3>No Reviews</h3>
                             <% } %>
                             <% if(!user) { %> 
+                                <link rel="stylesheet" href="/stylesheets/siwg.css">
                                 <h3>(sign in to leave a review!)</h3>
                                 <a href="/auth/google" class="siwg-link">
                                     <button type="submit" class="siwg">
