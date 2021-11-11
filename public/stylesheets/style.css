@@ -39,6 +39,9 @@ body {
   background-image: linear-gradient(to right bottom, #9f80df, #988ee7, #929bed, #90a8f1, #91b3f3) !important;
 }
 
+table {
+  opacity: .8;
+}
 
 nav {
   border-radius: 10px;
