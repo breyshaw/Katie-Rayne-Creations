@@ -20,7 +20,7 @@ html {
 body {
   background-image: url('https://i.imgur.com/Xk848Sq.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   /* Use a system font, if none are available use an available sans-sarif font */
