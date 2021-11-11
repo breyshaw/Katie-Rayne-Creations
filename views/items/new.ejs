@@ -5,25 +5,25 @@
     <img id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
     <%- include('../partials/nav') %>
     <h1>Add Item</h1>
-    <form action="/items" method="POST">
-    <label>Title:
-        <input type="string" name="title">
+    <form id="add-form" action="/items" method="POST">
+    <label class="form-label">Title:
+        <input class="form-control" type="string" name="title">
     </label><br>
-    <label>imageUrl:
-        <input type="string" name="imageUrl">
+    <label class="form-label">imageUrl:
+        <input class="form-control" type="string" name="imageUrl">
     </label><br>
-    <label>Type:
+    <label class="form-label">Type:
         <select name="type">
         <option value="clothing">Clothing</option>
         <option value="tumbler">Tumbler</option>
         <option value="misc">Misc.</option>
     </select>
     </label><br>
-    <label>Price:
-        <input type="number" name="price">
+    <label class="form-label">Price:
+        <input class="form-control" type="number" name="price">
     </label><br>
-    <label>Info:
-        <input type="text" name="info">
+    <label class="form-label">Info:
+        <input class="form-control" type="text" name="info">
     </label><br>
     <button type="submit" class='btn btn-success'>Add Item</button>
     </form>

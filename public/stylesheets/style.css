@@ -39,6 +39,7 @@ body {
   background-image: linear-gradient(to right bottom, #9f80df, #988ee7, #929bed, #90a8f1, #91b3f3) !important;
 }
 
+
 nav {
   border-radius: 10px;
   background-color: gray;
@@ -103,3 +104,22 @@ a {
 button.navbar-toggler {
   width: 100%;
 }
+
+#add-form {
+  font-size: 200%;
+}
+
+.form-label {
+  margin-top: 15px;
+}
+
+.form-label input {
+  height: 50px;
+  width: 500px;
+  font-size: 150%;
+}
+
+
+
+
+
