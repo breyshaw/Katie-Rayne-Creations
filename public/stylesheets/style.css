@@ -19,7 +19,7 @@ html {
 
 body {
   background-color: lavender;
-  background-image: url('../images/background/background.jpeg');
+  background-image: url('https://i.imgur.com/Xk848Sq.jpg');
   background-attachment: fixed;
   background-size: 125%;
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@ h1 {
 #logo {
   height: 300px;
   width: 250px;
-  content: url('../images/logo/logo.png');
+  content: url('https://i.imgur.com/nj8Wsml.png');
 }
 
 .carousel {
