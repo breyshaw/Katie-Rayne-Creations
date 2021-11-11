@@ -17,6 +17,9 @@ html {
     font-size: 62.5%
 }
 
+body {
+  background-color: rgb(56, 197, 244) ;
+}
 @media screen and (min-width:768px) {
 body {
   background-image: url('https://i.imgur.com/Xk848Sq.jpg');
@@ -32,9 +35,6 @@ body {
 }
 }
 
-body {
-  background-color: rgb(56, 197, 244) ;
-}
 
 nav {
   border-radius: 10px;
