@@ -64,6 +64,7 @@ h1 {
 #logo {
   height: 300px;
   width: 250px;
+  content: url('../images/logo/logo.png');
 }
 
 .carousel {
