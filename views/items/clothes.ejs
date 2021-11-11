@@ -26,7 +26,9 @@
             <% items.forEach((item) => { %> 
                     <div>
                     <p> <%= item.title %> </p>
+                    <a href="/items/<%= item._id %> ">
                     <img src= "<%= item.imageUrl %>" alt="Image of Item" class="item-img">
+                    </a>
                     </div>
                     <a href="/items/<%= item._id %> ">
                     <button type="button" class="btn btn-secondary">Details</button>

@@ -92,6 +92,7 @@ h1 {
 #showItem {
   height: 550px;
   width: auto;
+  border-radius: 20px;
 }
 
 section {
