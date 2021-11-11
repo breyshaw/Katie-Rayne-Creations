@@ -46,7 +46,7 @@ table {
 nav {
   border-radius: 10px;
   background-color: gray;
-  font-size: 1.6rem;
+  font-size: 200%;
   display: flex;
   justify-content: center;
   min-width: 100%;
@@ -54,6 +54,10 @@ nav {
   text-align: center;
   font-weight: bold;
   opacity: .9;
+}
+
+.nav-title {
+  font-size: 200%;
 }
 
 main {
@@ -75,14 +79,15 @@ h1 {
 }
 
 #logo {
-  height: 300px;
-  width: 250px;
+  height: 400px;
+  width: 350px;
 }
 
 .carousel {
   margin-top: 2%;
   margin-bottom: 1%;
-  width: 50%;
+  width: 65%;
+
 }
 
 #carousel-image {
