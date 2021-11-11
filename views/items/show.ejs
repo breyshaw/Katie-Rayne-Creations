@@ -19,6 +19,8 @@
             <section>
                 <% if (user) { %> 
                 <form id="review-form" action="/items/<%= item._id %>/reviews" method="POST">
+                    <label for="review-user">Your name(optional):</label>
+                    <textarea name="username" id="review-form"></textarea>
                     <label for="review-text">Review:</label>
                     <textarea name="content" id="review-form" cols="45" rows="2"></textarea>
                     <label for="rating-dropdown">Rating:</label>
@@ -45,7 +47,7 @@
                                 <% item.reviews.forEach(function(review) { %>
                                     <tr>
                                         <td>
-                                            <%= review.user %>
+                                            <%= review.username %>
                                         </td>
                                         <td>
                                             <%= review.createdAt.toLocaleDateString() %>

@@ -1,3 +1,6 @@
+This is code that I use to plug in where needed. 
+
+
 Google Sign in Button
 
 <% if (!user) { %>
@@ -14,3 +17,19 @@ Google Sign in Button
                 </button>
               </a>
               <% } %>
+
+Email form
+
+<main>
+    <img class="animate__animated animate__heartBeat" id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
+    <%- include('../partials/nav') %>
+    <h1 class="animate__animated animate__backInRight">Send an email!</h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label animate__animated animate__backInRight">Email address</label>
+        <input type="email" class="form-control animate__animated animate__backInRight" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label animate__animated animate__backInRight">Example textarea</label>
+        <textarea class="form-control animate__animated animate__backInRight" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+</main>
