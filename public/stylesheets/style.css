@@ -22,6 +22,7 @@ body {
   background-image: url('../images/background/background.jpeg');
   background-attachment: fixed;
   background-size: 100%;
+  background-repeat: no-repeat;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
