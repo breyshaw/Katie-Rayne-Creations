@@ -75,6 +75,15 @@ main {
   font-size: 50px;
 }
 
+.aboutme {
+  font-size: 40px;
+  text-align: center;
+}
+
+.sign-in {
+  font-size: 25px;
+  margin-top: 10px;
+}
 
 h1 {
   font-size: 3.6rem;
@@ -144,6 +153,11 @@ button.navbar-toggler {
 h2 {
   font-family: 'Boogaloo', cursive;
 }
+
+h3 {
+  font-family: 'Boogaloo', cursive;
+}
+
 
 
 

@@ -1,26 +1,35 @@
 <%- include('./partials/html-head') %>
-<main>
-  <img class='animate__animated animate__heartBeat' id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
-  <%- include('./partials/nav') %>
-  <title>HomePage</title>
-  <h1 class="animate__animated animate__backInRight title" >Happy fall <%= user ? user.profile.name : "y'all" %>!</h1>
-  <h1 class="animate__animated animate__backInRight title" >Katie Rayne Creations</h1>
-  <h2 class="animate__animated animate__backInRight" >Small business established by a silly goose.</h2>
-  <% if (!user) { %>
-    <link rel="stylesheet" href="/stylesheets/siwg.css">
-    <% } %>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button class="siwg animate__animated animate__backInRight" type="submit">Logout</button>
-      </a>
-      <% } else { %>
-        <a href="/auth/google" class="siwg-link">
-          <button type="submit" class="siwg animate__animated animate__backInRight">
-            <img id="siwg-image" alt="Sign in with Google" />
-          </button>
-        </a>
+  <main>
+    <img class='animate__animated animate__heartBeat' id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo" />
+    <%- include('./partials/nav') %>
+      <title>HomePage</title>
+      <h1 class="animate__animated animate__backInRight title">Happy fall <%= user ? user.profile.name : "y'all" %>!
+      </h1>
+      <h1 class="animate__animated animate__backInRight title">About me!</h1>
+      <h2 class="animate__animated animate__backInRight aboutme">In early 2020, I got the idea to try my hand at custom crafts.
+        I wanted to be able to showcase my different artistic abilities through custom apparel! Since, Katie Rayne
+        Creations has grown into a small, successful business. Not only do I create custom tees, I now offer other items
+        such as tumblers, keychains, bows, blankets, and other accessories! So far, the continued growth and success of
+        KRC has given me the opportunity to make it my full time job, and has allowed me to stay home with my two
+        children.
+        <br>
+        As always, thank you for supporting my small business! </h2>
+        <h3 class="animate__animated animate__backInRight sign-in" >Want to leave an item review? Sign in below!</h3>
+      <% if (!user) { %>
+        <link rel="stylesheet" href="/stylesheets/siwg.css">
         <% } %>
- 
-</main>
+          <% if (user) { %>
+            <a href="/auth/logout">
+              <button class="siwg animate__animated animate__backInRight" type="submit">Logout</button>
+            </a>
+            <% } else { %>
+              <a href="/auth/google" class="siwg-link">
+                <button type="submit" class="siwg animate__animated animate__backInRight">
+                  <img id="siwg-image" alt="Sign in with Google" />
+                </button>
+              </a>
+              <% } %>
 
-<%- include('./partials/footer') %>
+  </main>
+
+  <%- include('./partials/footer') %>
