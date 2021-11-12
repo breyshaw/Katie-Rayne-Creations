@@ -3,7 +3,7 @@
     <main>
         <img class="animate__animated animate__slideInDown" id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo" />
         <%- include('../partials/nav') %>
-            <h1>
+            <h1 class="title">
                 <%= item.title %>
             </h1>
             <img id='showItem' src='<%= item.imageUrl %>'>
@@ -64,11 +64,11 @@
                             </tbody>
                         </table>
                         <% } else { %>
-                            <h2 id='show-details' class="title">No Reviews yet</h2>
+                            <h2 id="no-reviews">No Reviews yet</h2>
                             <% } %>
                             <% if(!user) { %> 
                                 <link rel="stylesheet" href="/stylesheets/siwg.css">
-                                <h3>(sign in to leave a review!)</h3>
+                                <h3 id='no-reviews'>(sign in to leave a review!)</h3>
                                 <a href="/auth/google" class="siwg-link">
                                     <button type="submit" class="siwg">
                                       <img id="siwg-image" alt="Sign in with Google" />
