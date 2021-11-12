@@ -41,8 +41,10 @@ body {
 }
 
 table {
-  opacity: .8;
+  opacity: .7;
 }
+
+
 
 nav {
   border-radius: 10px;
@@ -125,9 +127,14 @@ h1 {
 }
 
 #showItem {
-  height: 550px;
+  height: 720px;
   width: auto;
   border-radius: 20px;
+}
+
+#show-details {
+  font-size: 40px;
+  width: 70%;
 }
 
 section {
