@@ -67,7 +67,7 @@ Katie Rayne Creations was developed as a full CRUD, MEN Stack application. The s
 ## Stretch Goals:
 -Create Shopping cart functionality
 <p></p>
--Add email form to contact me page
+-Add email form to contact me page, implement Nodemailer
 <p></p>
 -Ordering and payment functionality
 <p></p>
