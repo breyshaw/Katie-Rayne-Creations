@@ -3,10 +3,10 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
-    user: {type: Schema.Types.ObjectId, ref:'Profile'},
+    user: { type: Schema.Types.ObjectId, ref: 'Profile' },
     username: String,
     content: String,
-    rating: {type: Number, min: 1, max: 5},
+    rating: { type: Number, min: 1, max: 5 },
 }, {
     timestamps: true
 })

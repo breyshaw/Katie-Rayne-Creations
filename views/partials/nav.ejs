@@ -1,42 +1,42 @@
+<nav class="navbar navbar-light animate__animated animate__slideInUp"
+  style="background-image: linear-gradient(to right bottom, #9f80df, #988ee7, #929bed, #90a8f1, #91b3f3);">
+  <div class="container-fluid">
 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <h2 class='nav-title'>Menu</h2>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <% if (user) { %>
 
-      <nav class="navbar navbar-light animate__animated animate__slideInUp" style="background-image: linear-gradient(to right bottom, #9f80df, #988ee7, #929bed, #90a8f1, #91b3f3);" >
-      <div class="container-fluid">
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <h2 class='nav-title'>Menu</h2>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <% if (user.isAdmin) { %>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            <% if (user) { %>
-
-              <% if (user.isAdmin) { %>
-                <li class="nav-item">
               <a href="/items/new" class="nav-link">Add Item</a>
             </li>
+            <% } %>
+
               <% } %>
-              
-              <% } %>
-            <li class="nav-item">
-              <a href="/items" class="nav-link">All items</a>
-            </li>
-            <li class="nav-item">
-              <a href="/items/clothes" class="nav-link">Clothes</a>
-            </li>
-            <li class="nav-item">
-              <a href="/items/tumblers" class="nav-link">Tumblers</a>
-            </li>
-            <li class="nav-item">
-              <a href="/items/misc" class="nav-link">Misc. Crafts</a>
-            </li>
-            <li class="nav-item">
-              <a href="/contact/new" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+                <li class="nav-item">
+                  <a href="/items" class="nav-link">All items</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/items/clothes" class="nav-link">Clothes</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/items/tumblers" class="nav-link">Tumblers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/items/misc" class="nav-link">Misc. Crafts</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/contact/new" class="nav-link">Contact</a>
+                </li>
+      </ul>
+    </div>
+  </div>
+</nav>

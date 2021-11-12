@@ -1,28 +1,31 @@
 <%- include('../partials/html-head') %>
-<title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
 
-<main>
-    <img class="animate__animated animate__slideInDown" id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>
-    <%- include('../partials/nav') %>
-    <h1 class='title'>Edit Item</h1>
-    <form action="/items/<%= item._id %>?_method=PUT" method="POST">
-    <label>Title:
-        <input type="string" name="title" value="<%= item.title %>">
-    </label><br>
-    <label>imageUrl:
-        <input type="string" name="imageUrl" value="<%= item.imageUrl %>">
-    </label><br>
-    <label>Type:
-        <input type="string" name="typeOfItem" value="<%= item.typeOfItem %>">
-    </label><br>
-    <label>Price:
-        <input type="number" name="price" value="<%= item.price %>">
-    </label><br>
-    <label>Info:
-        <input type="text" name="info" value="<%= item.info %>">
-    </label><br>
-    <button type="submit">Save Item</button>
-    </form>
-</main>
+    <main>
+        <img class="animate__animated animate__slideInDown" id='logo' src='https://i.imgur.com/nj8Wsml.png'
+            alt="logo" />
+        <%- include('../partials/nav') %>
+            <h1 class='title'>Edit Item</h1>
+            <form action="/items/<%= item._id %>?_method=PUT" method="POST">
+                <label>Title:
+                    <input type="string" name="title" value="<%= item.title %>">
+                </label><br>
+                <label>imageUrl:
+                    <input type="string" name="imageUrl" value="<%= item.imageUrl %>">
+                </label><br>
+                <label>Type:
+                    <input type="string" name="typeOfItem" value="<%= item.typeOfItem %>">
+                </label><br>
+                <label>Price:
+                    <input type="number" name="price" value="<%= item.price %>">
+                </label><br>
+                <label>Info:
+                    <input type="text" name="info" value="<%= item.info %>">
+                </label><br>
+                <button type="submit">Save Item</button>
+            </form>
+    </main>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

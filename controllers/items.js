@@ -1,23 +1,21 @@
 import { Item } from '../models/item.js'
 
-
-
-function newItem(req,res) {
+function newItem(req, res) {
     res.render('items/new', {
-    title: 'Add item'
-})
+        title: 'Add item'
+    })
 }
 
 function create(req, res) {
     const item = new Item(req.body)
-    item.save(function(err) {
-    if (err) return res.redirect('/items/new')
-    res.redirect('/items')
-})
+    item.save(function (err) {
+        if (err) return res.redirect('/items/new')
+        res.redirect('/items')
+    })
 }
 
 function index(req, res) {
-    Item.find({}, function(err, items){
+    Item.find({}, function (err, items) {
         res.render('items/index', {
             items
         })
@@ -27,28 +25,28 @@ function index(req, res) {
 function show(req, res) {
     Item.findById(req.params.id, function (err, item) {
         res.render('items/show', {
-        item: item
+            item: item
         })
     })
 }
 
 function createReview(req, res) {
-    Item.findById(req.params.id, function(err, item) {
+    Item.findById(req.params.id, function (err, item) {
         item.reviews.push(req.body)
-        item.save(function(err) {
+        item.save(function (err) {
             res.redirect(`/items/${item._id}`)
         })
     })
 }
 
-function deleteItem(req,res) {
-    Item.findByIdAndDelete(req.params.id, function(err, item) {
+function deleteItem(req, res) {
+    Item.findByIdAndDelete(req.params.id, function (err, item) {
         res.redirect('/items')
     })
 }
 
 function edit(req, res) {
-    Item.findById(req.params.id, function(err, item) {
+    Item.findById(req.params.id, function (err, item) {
         res.render('items/edit', {
             title: "Edit item",
             item,
@@ -56,44 +54,37 @@ function edit(req, res) {
         })
     })
 }
+
 function update(req, res) {
-        Item.findByIdAndUpdate(req.params.id, req.body, function(err, item) {
-            res.redirect(`/items/${item._id}`)
+    Item.findByIdAndUpdate(req.params.id, req.body, function (err, item) {
+        res.redirect(`/items/${item._id}`)
+    })
+}
+
+function clothes(req, res) {
+    Item.find({ type: 'clothing' }, function (err, items) {
+        res.render('items/clothes', {
+            items
         })
-    }
+    })
+}
 
-    // function clothes(req,res) {
-    //     Item.find()
-    // }
-
-    function clothes(req, res) {
-        Item.find({type: 'clothing'}, function(err, items){
-            res.render('items/clothes', {
-                items
-            })
+function tumblers(req, res) {
+    Item.find({ type: 'tumbler' }, function (err, items) {
+        res.render('items/tumblers', {
+            items
         })
-    }
+    })
+}
 
-
-    function tumblers(req, res) {
-        Item.find({type:'tumbler'}, function(err, items){
-            res.render('items/tumblers', {
-                items
-            })
+function misc(req, res) {
+    Item.find({ type: 'misc' }, function (err, items) {
+        res.render('items/misc', {
+            items
         })
-    }
+    })
+}
 
-    function misc(req, res) {
-        Item.find({type:'misc'}, function(err, items){
-            res.render('items/misc', {
-                items
-            })
-        })
-    }
- 
-
-
-    
 export {
     newItem as new,
     create,

@@ -1,57 +1,62 @@
 <%- include('../partials/html-head') %>
 
 
-<main>
-  <div id="carouselExampleControls" class="carousel slide animate__animated animate__backInRight" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="3000">
-        <img id='carousel-image' src="https://i.imgur.com/Mj5cvKf.jpg" class="d-block w-100" alt="...">
+  <main>
+    <div id="carouselExampleControls" class="carousel slide animate__animated animate__backInRight"
+      data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img id='carousel-image' src="https://i.imgur.com/Mj5cvKf.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img id='carousel-image' src="https://i.imgur.com/SSjfXUX.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img id='carousel-image' src="https://i.imgur.com/PMBGuuK.jpg" class="d-block w-100" alt="...">
+        </div>
       </div>
-      <div class="carousel-item" data-bs-interval="3000">
-        <img id='carousel-image' src="https://i.imgur.com/SSjfXUX.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="3000">
-        <img id='carousel-image' src="https://i.imgur.com/PMBGuuK.jpg" class="d-block w-100" alt="...">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
     <%- include('../partials/nav') %>
-    <h1 class='animate__animated animate__backInRight title' >All Items</h1>
-    <section class='animate__animated animate__backInRight' >
-            <% items.forEach((item) => { %> 
-                    <div>
-                    <p> <%= item.title %> </p>
-                    <a href="/items/<%= item._id %> ">
-                    <img src= "<%= item.imageUrl %>" alt="Image of Item" class="item-img">
-                    </a>
-                    </div>
-                    <a href="/items/<%= item._id %> ">
-                      <button type="button" class="btn btn-secondary">Details</button>
-                      </a>
-                    <div>
-                    </a>
-                    <% if (user) { %> 
-                    <% if (user.isAdmin) { %> 
-                    <div>
-                    <a href="/items/<%= item._id %>/edit">
-                        <button class='btn btn-success'>Edit Item</button>
-                      </a>
-                    </div>
-                    <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
-                    <button class="btn btn-danger">Delete item</button>
-                    </form>
-                    <% } %>
-                    <% } %>
-                <% }) %> 
-    </section>
-</main>
+      <h1 class='animate__animated animate__backInRight title'>All Items</h1>
+      <section class='animate__animated animate__backInRight'>
+        <% items.forEach((item)=> { %>
+          <div>
+            <p>
+              <%= item.title %>
+            </p>
+            <a href="/items/<%= item._id %> ">
+              <img src="<%= item.imageUrl %>" alt="Image of Item" class="item-img">
+            </a>
+          </div>
+          <a href="/items/<%= item._id %> ">
+            <button type="button" class="btn btn-secondary">Details</button>
+          </a>
+          <div>
+            </a>
+            <% if (user) { %>
+              <% if (user.isAdmin) { %>
+                <div>
+                  <a href="/items/<%= item._id %>/edit">
+                    <button class='btn btn-success'>Edit Item</button>
+                  </a>
+                </div>
+                <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                  <button class="btn btn-danger">Delete item</button>
+                </form>
+                <% } %>
+                  <% } %>
+                    <% }) %>
+      </section>
+  </main>
 
-<%- include('../partials/footer') %>
+  <%- include('../partials/footer') %>
