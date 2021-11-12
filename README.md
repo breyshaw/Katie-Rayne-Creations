@@ -30,7 +30,7 @@ Here is the show item view, post styling and functionality:
 <p></p>
 <img src="https://i.imgur.com/W7gOzBO.png" width="450" height="375"> 
 
-Katie Rayne Creations was developed as a full CRUD, MEN Stack application. The site is centered around the navigation bar. Each category/button on the navigation bar has established routes and views. The item controller contains all of the controller functions that render categorized items on the corresponding category view when a navigation button is clicked. 
+Katie Rayne Creations was developed as a full CRUD, MEN Stack application. At an admin level, a user can perform full CRUD on this site. A regular user or logged out user can only read. The site is centered around the navigation bar. Each category/button on the navigation bar has established routes and views. The item controller contains all of the controller functions that render categorized items on the corresponding category view when a navigation button is clicked. 
 <p></p>
 <img src="https://i.imgur.com/q51zaR4.png" width="450" height="375"> 
 
