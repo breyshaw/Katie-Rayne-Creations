@@ -2,7 +2,7 @@
 
 Katie-Rayne-Creations is custom clothing, tumbler, and craft site for my wife's small business.
 
-Visit the site [here](https://code-hero.surge.sh).
+Visit the site [here](https://katie-rayne-creations.herokuapp.com/).
 
 ## Motivation: 
 I wanted to create an application that I will continue to work on developing as my wife's business expands.
