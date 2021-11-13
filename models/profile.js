@@ -2,16 +2,17 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const inquirySchema = new mongoose.Schema({
-  //owner:
-  email: String,
-  content: String,
-})
+//For future email feature
+// const inquirySchema = new mongoose.Schema({
+//   email: String,
+//   content: String,
+// })
 
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
-  inquiriesMade: [{ type: Schema.Types.ObjectId, ref: inquirySchema }]
+  //For future feature:
+  // inquiriesMade: [{ type: Schema.Types.ObjectId, ref: inquirySchema }]
 }, {
   timestamps: true
 })

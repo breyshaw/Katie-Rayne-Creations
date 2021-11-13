@@ -1,4 +1,4 @@
-
+//Renders the contact page
 function newContact(req, res) {
       res.render('contact/new', {
         title: 'Contact me!',

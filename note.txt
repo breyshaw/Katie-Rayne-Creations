@@ -18,7 +18,7 @@ Google Sign in Button
               </a>
               <% } %>
 
-Email form
+Bootstrap Email form (for future feature)
 
 <main>
     <img class="animate__animated animate__heartBeat" id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo"/>

@@ -61,6 +61,7 @@ function update(req, res) {
     })
 }
 
+//Render a page specifically for just clothes, sending items with clothing type
 function clothes(req, res) {
     Item.find({ type: 'clothing' }, function (err, items) {
         res.render('items/clothes', {
@@ -68,7 +69,7 @@ function clothes(req, res) {
         })
     })
 }
-
+//Render a page specifically for just tumblers, sending items with tumbler type
 function tumblers(req, res) {
     Item.find({ type: 'tumbler' }, function (err, items) {
         res.render('items/tumblers', {
@@ -76,7 +77,7 @@ function tumblers(req, res) {
         })
     })
 }
-
+//Render a page specifically for just misc crafts, sending items with misc type
 function misc(req, res) {
     Item.find({ type: 'misc' }, function (err, items) {
         res.render('items/misc', {
