@@ -18,12 +18,8 @@ html {
 }
 
 body {
-  background-image: url('https://i.imgur.com/Xk848Sq.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../images/krc/plaster_seamless_texture_4375.jpg');
   background-position: center;
-  background-attachment: fixed;
-  /* Use a system font, if none are available use an available sans-sarif font */
   font-family: 'Boogaloo', cursive;
   margin: 0;
   color: #941085;
