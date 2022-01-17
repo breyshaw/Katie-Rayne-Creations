@@ -70,14 +70,14 @@ main {
 }
 
 .title {
-  font-size: 50px;
+  font-size: 3.6rem;
   text-align: center;
   width: 50%;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .aboutme {
-  font-size: 40px;
+  font-size: 3.6rem;
   text-align: center;
   width: 80%;
 }
@@ -99,8 +99,14 @@ h1 {
 }
 
 #logo {
-  height: 450px;
-  width: 400px;
+  width: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+#logo {
+  width: 50%;
+  max-width: 250px;
+}
 }
 
 #social-icon {
@@ -164,10 +170,21 @@ button.navbar-toggler {
 
 h2 {
   font-family: 'Boogaloo', cursive;
+  font-size: 1.6rem;
 }
 
 h3 {
   font-family: 'Boogaloo', cursive;
+  font-size: 1.6rem;
+}
+
+p {
+  font-family: 'Boogaloo', cursive;
+  font-size: 1.6rem;
+}
+
+.item-title {
+  font-size: 3.6rem;
 }
 
 #no-reviews {

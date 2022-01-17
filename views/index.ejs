@@ -3,10 +3,10 @@
     <img class='animate__animated animate__heartBeat' id='logo' src='https://i.imgur.com/nj8Wsml.png' alt="logo" />
     <%- include('./partials/nav') %>
       <title>HomePage</title>
-      <h1 class="animate__animated animate__backInRight title">Happy fall <%= user ? user.profile.name : "y'all" %>!
+      <h1 class="animate__animated animate__backInRight title">Happy New Year <%= user ? user.profile.name : "y'all" %>!
       </h1>
       <h1 class="animate__animated animate__backInRight title">About me!</h1>
-      <h2 class="animate__animated animate__backInRight aboutme">In early 2020, I got the idea to try my hand at custom
+      <p class="animate__animated animate__backInRight aboutme">In early 2020, I got the idea to try my hand at custom
         crafts.
         I wanted to be able to showcase my different artistic abilities through custom apparel! Since, Katie Rayne
         Creations has grown into a small, successful business. Not only do I create custom tees, I now offer other items
@@ -15,7 +15,7 @@
         children.
         <br>
         As always, thank you for supporting my small business!
-      </h2>
+      </p>
       <h3 class="animate__animated animate__backInRight sign-in">Want to leave an item review? Sign in below!</h3>
       <% if (!user) { %>
         <link rel="stylesheet" href="/stylesheets/siwg.css">
